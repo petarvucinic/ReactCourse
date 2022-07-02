@@ -1,6 +1,6 @@
 import "./Card.css";
 
-function Card({title, job, url}) {
+function Card({url, title, job}) {
     
   return (
     <div className="card">
