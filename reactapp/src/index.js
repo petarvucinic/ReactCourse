@@ -9,6 +9,7 @@ import PingF from "./componets/functional/PingF";
 import CounterDown from "./componets/class/CounterDown";
 // import FromDate from "./componets/class/FromDate";
 import Counter2 from "./componets/class/Counter2";
+import Counter2F from "./componets/functional/Counter2F";
 
 // import
 
@@ -20,6 +21,7 @@ root.render(
     <CounterDown></CounterDown>
     {/* <FromDate></FromDate> */}
     <Counter2></Counter2>
+    <Counter2F></Counter2F>
   </React.StrictMode>
 );
 
