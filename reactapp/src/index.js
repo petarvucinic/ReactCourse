@@ -7,7 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 import Ping from "./componets/class/Ping";
 import PingF from "./componets/functional/PingF";
 import CounterDown from "./componets/class/CounterDown";
-import FromDate from "./componets/class/FromDate";
+// import FromDate from "./componets/class/FromDate";
+import Counter2 from "./componets/class/Counter2";
 
 // import
 
@@ -17,7 +18,8 @@ root.render(
     <Ping></Ping>
     <PingF></PingF>
     <CounterDown></CounterDown>
-    <FromDate></FromDate>
+    {/* <FromDate></FromDate> */}
+    <Counter2></Counter2>
   </React.StrictMode>
 );
 
