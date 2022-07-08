@@ -19,7 +19,13 @@ class Ping extends React.Component {
   }
 
   render() {
-    return <div>{this.state.date.toTimeString()}</div>;
+    return (
+      <div>
+        <h1>trenutno vreme</h1>
+        {this.state.date.toTimeString()}
+        <hr />
+      </div>
+    );
   }
 }
 
