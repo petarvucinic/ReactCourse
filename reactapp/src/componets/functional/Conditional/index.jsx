@@ -1,4 +1,4 @@
-import style from "/reactapp/src/componets/functional/Conditional/card.module.css"
+import style from "./card.module.css";
 
 const Conditional = (props) => {
   const { text, type, subtitle, extraText, extraIcon } = props;

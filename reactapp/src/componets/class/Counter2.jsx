@@ -26,8 +26,8 @@ class Counter2 extends React.Component {
         return (
             <div>
                 <p>{this.state.counter}</p>
-                <button className={style.btn} onClick={(e) => {this.increment(e)}}>+</button>
-                <button className={style.btn} onClick={(e) => {this.decrement(e)}}>-</button>
+                <button className={style.btn} onClick={() => {this.increment(e)}}>+</button>
+                <button className={style.btn} onClick={() => {this.decrement(e)}}>-</button>
             </div>
         )
     }

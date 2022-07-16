@@ -8,7 +8,7 @@ class Ping extends React.Component {
   componentDidMount() {
     this.timerID = setInterval(() => {
       this.setState({
-        ...this.state,
+        // ...this.state,
         date: new Date(),
       });
     }, 1000);

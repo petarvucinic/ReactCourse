@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+// import List from "./componets/List";
+// import Quotes from "./componets/Quotes/quotes";
 // import Badge1 from "./componets/functional/Badge1";
-import Conditional from "./componets/functional/Conditional";
+// import Conditional from "./componets/functional/Conditional";
 
 // import "./index.css";
 // import reportWebVitals from "./reportWebVitals";
@@ -30,7 +32,8 @@ root.render(
     <Badge1 type="tip3" />
     <Badge1 type="tip4" />
     <Badge1 type="tip5" /> */}
-    <Conditional></Conditional>
+    {/* <Conditional></Conditional> */}
+    {/* <List></List> */}
   </React.StrictMode>
 );
 
