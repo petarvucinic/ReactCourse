@@ -3,20 +3,24 @@ const SimpleForm = () => {
   //   const [name, setName] = useState("");
   //   const [surname, setSurname] = useState("");
 
-  const [inputs, setInputs] = useState({ name: "", surname: "", password: "", agree : false});
+  const [inputs, setInputs] = useState({
+    name: "",
+    surname: "",
+    password: "",
+    agree: false,
+  });
 
   const handleChagne = (e) => {
-    if(e.target.type === 'checkbox'){
-        setInputs({
-            ...inputs,
-            [e.target.id]: e.target.checked,
-          });
+    if (e.target.type === "checkbox") {
+      setInputs({
+        ...inputs,
+        [e.target.id]: e.target.checked,
+      });
     } else {
-        
-        setInputs({
-            ...inputs,
-            [e.target.id]: e.target.value,
-        });
+      setInputs({
+        ...inputs,
+        [e.target.id]: e.target.value,
+      });
     }
   };
   return (
@@ -49,7 +53,12 @@ const SimpleForm = () => {
         id="password"
       ></input>
       <label>I agree:</label>
-      <input type="checkbox" checked={inputs.agree} onChange={handleChagne} id="agree"></input>
+      <input
+        type="checkbox"
+        checked={inputs.agree}
+        onChange={handleChagne}
+        id="agree"
+      ></input>
       <input type="submit" />
     </form>
   );
