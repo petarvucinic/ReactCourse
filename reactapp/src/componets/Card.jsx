@@ -12,3 +12,4 @@ function Card({url, title, job}) {
 }
 
 export default Card;
+

@@ -1,27 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const SearchMock = (props) => {
-  const [searchValue, setSearchValue] = useState("");
+const SearchMock = () => {
+  const [input, setInput] = useState("");
+
   return (
     <div>
-      <SearchInput value={searchValue} setValue={setSearchValue}></SearchInput>
-      <SearchList search={searchValue}></SearchList>
+      <SearchInput value={input} setValue={setInput} />
+      <SearchList search={input} />
     </div>
   );
 };
-const SearchInput = (props) => {
-  const { value, setValue } = props;
+
+const SearchInput = ({ value, setValue }) => {
   return (
     <input
-      type="text"
       value={value}
+      setValue={setValue}
       onChange={(e) => setValue(e.target.value)}
-    ></input>
+    />
   );
 };
 
-const SearchList = (props) => {
-  const { search } = props;
+
+const SearchList = (search) => {
   const list = [
     { title: "Harry Potter 6" },
     { title: "Game of thrones" },
@@ -30,15 +31,14 @@ const SearchList = (props) => {
     { title: "Kamiondzije" },
   ];
 
-  const searchResult = list.filter((movie) => {
-    if (search === "") return false;
-    return movie.title.toLowerCase().includes(search.toLocaleLowerCase());
-  });
-
+  const searchList = list.filter(movie => {
+    if (search === "") return false
+    return movie.title.includes(search)
+  })
   return (
     <div>
-      {searchResult.map((movie) => {
-        return <p>{movie.title}</p>;
+      {searchList.map((movie) => {
+        <p>{movie.title}</p>;
       })}
     </div>
   );

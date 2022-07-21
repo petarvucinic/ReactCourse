@@ -39,21 +39,19 @@ const TemperatureConverter = (props) => {
       </button>
     </div>
   );
-
-  function TemperatureInput(props) {
-    const { type = "Celsius", value, setValue } = props;
-
-    return (
-      <div>
-        <label>{type}</label>
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-      </div>
-    );
-  }
 };
+function TemperatureInput(props) {
+  const { type = "", value, setValue } = props;
 
+  return (
+    <div>
+      <label>{type}</label>
+      <input
+        type="number"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+    </div>
+  );
+}
 export default TemperatureConverter;
