@@ -1,7 +1,8 @@
 import React from "react";
 import style from "./CheckBox.module.css";
 
-const CheckBox = ({ size, radius, color }) => {
+const CheckBox = (props) => {
+  const { size, radius, color } = props;
   const getColor = () => {
     switch (color) {
       case "dark":
@@ -55,8 +56,8 @@ const CheckBox = ({ size, radius, color }) => {
     <div className={style.main}>
       <input
         type="checkbox"
-        className={`${getColor()} ${getSize()} ${sizeRadius()}`}
-      />
+        className={`${getColor()} ${style.main}  ${sizeRadius()} ${getSize()}`}
+      ></input>
     </div>
   );
 };
